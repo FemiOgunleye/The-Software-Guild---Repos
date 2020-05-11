@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+	Femi Ogunleye
+	Created 5-2-2020
+	Last modified 5-2-2020
+	thefemifactor@outlook.com
+-->
+<html lang="en">
+	<head>
+		<title>The Chicken Brothers</title>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	
+<main>
+
+<body>
+	<header>
+			<h1>The Chicken Brothers</h1>
+			
+		<nav>
+			<p><a class='btn badge-pill' href="index.html">Home</a></p>
+			<p><a class='btn badge-pill' href="menu.html">Menu</a></p>
+			<p><a class='btn badge-pill' href="contact us.html">Contact Us</a></p>
+		</nav>
+	</header>
+		
+	<form name='form' action="" onsubmit='return validate()' method="POST">
+		<label for="name">Name:</label><input type="text" id="name" name="name"><br />
+		<label for="email">Email:</label><input type="text" id="email" name="email"><br />
+		<label for="phone">Phone:</label><input type="text" id="phone" name="phone"><br />
+		
+		<label for="inquiry">Reason for Inquiry:"</label>
+			<select id="inquiry" name="inquiry">
+				<option value="default" selected>--Catering--</option>
+				<option value="privateParty">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Other</option>
+			</select>
+			
+		<label for="info"><br />Additional Information:</label><br />
+			<textarea id="info" name="info"></textarea><br />
+		
+		<fieldset>
+			<legend>Have you been to the restaurant?</legend>
+				<input type="radio" id="choice1" name="visited" value="no">
+					<label for="choice1">No</label>
+				<input type="radio" id="choice2" name="visited" value="yes">
+					<label for="choice1">Yes</label>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Best days to contact you:</legend>
+			<input type="checkbox" id="m" name="day" value="m">
+				<label for="m">M</label><br />
+			<input type="checkbox" id="t" name="day" value="t">
+				<label for="t">T</label><br />
+			<input type="checkbox" id="w" name="day" value="w">
+				<label for="w">W</label><br />
+			<input type="checkbox" id="th" name="day" value="th">
+				<label for="th">Th</label><br />
+			<input type="checkbox" id="f" name="day" value="f">
+				<label for="f">F</label><br />
+	
+		<input type="submit" name="sendRequest" value="Send Request">
+	</form>
+	
+	
+	<footer>
+		<hr />
+		<p>12000 – 12100 Coors Rd SW, Albuquerque NM, 87045</p>
+		<p>(505)146-0195</p>
+		
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+	
+	<script>
+		function validate() {
+		  var x = document.forms["form"]["name"].value;
+		  if (x == "") {
+			alert("Name must be filled out");
+			return false;
+		  }
+		   var x = document.forms["form"]["email"].value;
+		  if (x == "") {
+			alert("Email must be filled out");
+			return false;
+		  }
+		   var x = document.forms["form"]["phone"].value;
+		  if (x == "") {
+			alert("Phone must be filled out");
+			return false;
+		  }
+		}
+	</script>
+	
+      <noscript>
+        alert('Your browser does not support JavaScript!')
+      </noscript>
+</body>
+</main>
+</html>
